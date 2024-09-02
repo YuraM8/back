@@ -1,0 +1,52 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.4)
+
+[INFO] 2024-08-29 00:27:57,028 Starting Application v1.0 using Java 17.0.12 with PID 8414 (/home/yura/teachua/teachua-backend-YuraM8/target/dev.war started by yura in /home/yura/teachua/teachua-backend-YuraM8)
+[INFO] 2024-08-29 00:27:57,032 No active profile set, falling back to 1 default profile: "default"
+[INFO] 2024-08-29 00:27:58,801 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO] 2024-08-29 00:27:58,949 Finished Spring Data repository scanning in 137 ms. Found 10 JPA repository interfaces.
+[INFO] 2024-08-29 00:27:59,765 Tomcat initialized with port 8080 (http)
+[INFO] 2024-08-29 00:27:59,781 Starting service [Tomcat]
+[INFO] 2024-08-29 00:27:59,782 Starting Servlet engine: [Apache Tomcat/10.1.19]
+[INFO] 2024-08-29 00:28:01,303 At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[INFO] 2024-08-29 00:28:01,384 Initializing Spring embedded WebApplicationContext
+[INFO] 2024-08-29 00:28:01,385 Root WebApplicationContext: initialization completed in 4200 ms
+[INFO] 2024-08-29 00:28:01,557 HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO] 2024-08-29 00:28:01,638 HHH000412: Hibernate ORM core version 6.4.4.Final
+[INFO] 2024-08-29 00:28:03,153 HHH000026: Second-level cache disabled
+[INFO] 2024-08-29 00:28:03,412 No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO] 2024-08-29 00:28:03,445 HikariPool-1 - Starting...
+[INFO] 2024-08-29 00:28:03,577 HikariPool-1 - Added connection org.mariadb.jdbc.Connection@60652518
+[INFO] 2024-08-29 00:28:03,580 HikariPool-1 - Start completed.
+[INFO] 2024-08-29 00:28:05,199 HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO] 2024-08-29 00:28:05,282 Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO] 2024-08-29 00:28:06,236 Hibernate is in classpath; If applicable, HQL parser will be used.
+[WARN] 2024-08-29 00:28:07,379 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO] 2024-08-29 00:28:07,749 Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2a64c8c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20c642ef, org.springframework.security.web.context.SecurityContextHolderFilter@2407f1a8, org.springframework.security.web.header.HeaderWriterFilter@3b8adbda, org.springframework.security.web.authentication.logout.LogoutFilter@6f78eb17, com.softserve.teachua.security.JwtFilter@261b27db, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@626e3b18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a29aced, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f799f4c, org.springframework.security.web.session.SessionManagementFilter@7bce016c, org.springframework.security.web.access.ExceptionTranslationFilter@48b14e4a, org.springframework.security.web.access.intercept.AuthorizationFilter@1ed28f57]
+[WARN] 2024-08-29 00:28:08,045 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+[INFO] 2024-08-29 00:28:08,049 Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO] 2024-08-29 00:28:08,051 HikariPool-1 - Shutdown initiated...
+[INFO] 2024-08-29 00:28:08,062 HikariPool-1 - Shutdown completed.
+[INFO] 2024-08-29 00:28:08,087 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[ERROR] 2024-08-29 00:28:08,107 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
