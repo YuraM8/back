@@ -8,7 +8,7 @@ WORKDIR /app
 
 # copy the Maven settings file and the project files to start the build
 
-COPY /pom.xml .
+COPY pom.xml .
 
 # cache dependencies so that we don't have to load them every time
 
@@ -20,7 +20,7 @@ COPY . .
 
 # buld progect with Maven
 
-RUN mvn -f ./pom.xml clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Stage 2: Run the built application with a lighter JDK image
 
@@ -34,16 +34,10 @@ WORKDIR /app
 
 COPY --from=build /app/target/*.war /app/dev.war
 
-# Copy SQL scripts from the `back` directory to the container
-COPY --from=build /app/src/main/resources/import.sql /app/import.sql
-
-
-# set the environment variables for connecting to the database
-
-# ENV JDBC_DRIVER=org.mariadb.jdbc.Driver \
-  #  DATASOURCE_URL=jdbc:mariadb://127.0.0.1:3306/teachua \
-   # DATASOURCE_USER=your_db_user \
-   # DATASOURCE_PASSWORD=your_db_password
+ENV JDBC_DRIVER=${JDBC_DRIVER:-org.mariadb.jdbc.Driver} \
+    DATASOURCE_URL=${DATASOURCE_URL:-jdbc:mariadb://127.0.0.1:3306/teachua} \
+    DATASOURCE_USER=${DATASOURCE_USER:-your_db_user} \
+    DATASOURCE_PASSWORD=${DATASOURCE_PASSWORD:-your_db_password}
 
 # Expose 8080
 
