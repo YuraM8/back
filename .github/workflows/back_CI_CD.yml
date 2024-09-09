@@ -71,8 +71,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/yuram8/teachua-frontend:latest .
+          docker build -t ghcr.io/yuram8/teachua-back:latest .
 
       - name: Push Docker image to GitHub Container Registry
         run: |
-          docker push ghcr.io/yuram8/teachua-frontend:latest 
+          docker push ghcr.io/yuram8/teachua-back:latest 
