@@ -18,7 +18,7 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin' # Use the Eclipse Temurin distribution
+          distribution: 'temurin'
           java-version: '17'
 
       - name: Set up Maven
@@ -53,7 +53,6 @@ jobs:
 
       - name: Run unit tests
         run: mvn test
-        working-directory: ./back
 
   docker:
     needs: build
